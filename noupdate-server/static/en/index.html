@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UpdateMate - macOS Update Manager</title>
+    <meta name="description" content="UpdateMate puts you in control of when your Mac updates. Delay major upgrades, remove red badges, and manage your update schedule with Apple's official APIs." />
+    <meta name="keywords" content="macOS update manager,delay macOS updates,block macOS update badge,UpdateMate,macOS update control" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://example.com/en/" />
+    <link rel="alternate" hreflang="en" href="https://example.com/en/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://example.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://example.com/en/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="UpdateMate - macOS Update Manager" />
+    <meta property="og:description" content="Your Mac. Your update schedule." />
+    <meta property="og:url" content="https://example.com/en/" />
+    <meta property="og:site_name" content="UpdateMate" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "UpdateMate",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS 13+",
+        "description": "A macOS update manager that helps you decide when your Mac updates.",
+        "offers": [
+          { "@type": "Offer", "price": "9.99", "priceCurrency": "USD", "name": "Standard" },
+          { "@type": "Offer", "price": "19.99", "priceCurrency": "USD", "name": "Pro" }
+        ]
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-950 text-white min-h-screen">
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+        <a href="/en/" class="text-xl font-bold tracking-tight">UpdateMate</a>
+        <nav class="flex gap-5 text-sm text-slate-300 items-center">
+          <a href="/en/docs.html" class="hover:text-white">Docs</a>
+          <a href="/en/login.html" class="hover:text-white">Trial & Activation</a>
+          <a href="/en/dashboard.html" class="hover:text-white">Dashboard</a>
+          <a href="/" class="rounded-lg border border-slate-700 px-3 py-1 hover:border-slate-500">中文</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-2 items-center">
+        <div class="space-y-6">
+          <span class="inline-flex rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-1 text-sm text-emerald-200">Your Mac. Your update schedule.</span>
+          <h1 class="text-4xl md:text-6xl font-bold tracking-tight">Take control of when your Mac updates</h1>
+          <p class="text-slate-300 text-lg leading-8">UpdateMate helps you manage macOS updates on your terms. Using Apple's official configuration APIs, it safely delays major upgrades, keeps your workflow stable, and removes the constant distraction of red update badges.</p>
+          <div class="flex gap-4 flex-wrap">
+            <a href="/en/login.html" class="rounded-xl bg-emerald-500 px-6 py-3 font-medium hover:bg-emerald-400">Try it free for 7 days</a>
+            <a href="/en/docs.html" class="rounded-xl border border-slate-700 px-6 py-3 font-medium hover:border-slate-500">Read the docs</a>
+          </div>
+          <ul class="grid gap-3 text-slate-300 text-sm">
+            <li>Built on Apple's official APIs. Safe & compliant.</li>
+            <li>Stability First / Version Lock / Full Control</li>
+            <li>Global pricing: $9.99 Standard, $19.99 Pro with PPP support</li>
+          </ul>
+        </div>
+        <aside class="rounded-3xl border border-slate-800 bg-slate-900 p-8 shadow-2xl shadow-emerald-950/40">
+          <h2 class="text-2xl font-semibold">Pricing</h2>
+          <div class="mt-6 grid gap-4">
+            <div class="rounded-2xl border border-slate-800 bg-slate-950 p-5">
+              <div class="flex items-center justify-between"><strong>Free Trial</strong><span class="text-emerald-300">7 days</span></div>
+              <p class="mt-2 text-sm text-slate-400">Full access, no credit card required.</p>
+            </div>
+            <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5">
+              <div class="flex items-center justify-between"><strong>Standard</strong><span class="text-emerald-300">$9.99 / version</span></div>
+              <p class="mt-2 text-sm text-slate-300">1 device, perpetual for the purchased macOS generation.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-950 p-5">
+              <div class="flex items-center justify-between"><strong>Pro</strong><span class="text-emerald-300">$19.99 / version</span></div>
+              <p class="mt-2 text-sm text-slate-400">Up to 3 devices, priority support.</p>
+            </div>
+          </div>
+          <div class="mt-6 rounded-2xl border border-slate-800 bg-slate-950 p-5 text-sm text-slate-400">
+            PPP pricing supported by region. Mainland China keeps RMB pricing at ¥68 / ¥128.
+          </div>
+        </aside>
+      </section>
+
+      <section class="max-w-6xl mx-auto px-6 pb-16 grid gap-6 md:grid-cols-3">
+        <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h2 class="text-xl font-semibold">Stability First</h2>
+          <p class="mt-3 text-slate-400 leading-7">Delay major updates by 90 days while letting security patches through.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h2 class="text-xl font-semibold">Version Lock</h2>
+          <p class="mt-3 text-slate-400 leading-7">Stay on your current major version and reduce surprise compatibility issues.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h2 class="text-xl font-semibold">Full Control</h2>
+          <p class="mt-3 text-slate-400 leading-7">Block everything until you're ready and keep your Mac distraction-free.</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

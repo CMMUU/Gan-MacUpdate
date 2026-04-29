@@ -1,0 +1,8 @@
+"app.name" = "UpdateMate";
+"app.slogan" = "你的 Mac，你决定何时更新。";
+"strategy.stability_first.title" = "稳定优先";
+"strategy.stability_first.summary" = "延迟大版本更新 90 天，小版本和安全更新正常放行。";
+"strategy.version_lock.title" = "版本锁定";
+"strategy.version_lock.summary" = "停留在当前大版本，尽量避免兼容性风险。";
+"strategy.full_control.title" = "完全自主";
+"strategy.full_control.summary" = "所有更新均由你手动决定。";

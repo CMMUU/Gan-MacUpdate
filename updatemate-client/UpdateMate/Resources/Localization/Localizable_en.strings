@@ -1,0 +1,8 @@
+"app.name" = "UpdateMate";
+"app.slogan" = "Your Mac. Your update schedule.";
+"strategy.stability_first.title" = "Stability First";
+"strategy.stability_first.summary" = "Delay major updates for 90 days while allowing minor and security updates.";
+"strategy.version_lock.title" = "Version Lock";
+"strategy.version_lock.summary" = "Stay on your current major macOS version and reduce compatibility surprises.";
+"strategy.full_control.title" = "Full Control";
+"strategy.full_control.summary" = "Block all updates until you decide to move forward.";

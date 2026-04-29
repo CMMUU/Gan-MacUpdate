@@ -1,0 +1,8 @@
+spring.datasource.url=jdbc:mysql://127.0.0.1:3306/xpay?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+spring.datasource.username=root
+spring.datasource.password=change-me
+spring.redis.host=127.0.0.1
+spring.redis.port=6379
+server.port=8888
+xpay.notify-url=https://example.com/api/payment/xpay/callback
+xpay.return-url=https://example.com/dashboard

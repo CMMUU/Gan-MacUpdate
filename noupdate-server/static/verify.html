@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoUpdate 验证码登录 - 安全进入用户控制台</title>
+    <meta name="description" content="输入邮箱验证码，安全登录 NoUpdate 用户控制台，创建订单并下载 macOS 更新屏蔽工具。" />
+    <meta name="robots" content="noindex,follow" />
+    <link rel="canonical" href="https://example.com/verify.html" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-white flex items-center justify-center px-6">
+    <main class="w-full max-w-md rounded-3xl border border-slate-800 bg-slate-900 p-8 shadow-2xl shadow-slate-950/50">
+      <h1 class="text-3xl font-bold">输入验证码</h1>
+      <p class="mt-3 text-slate-400">验证码已发送到你的邮箱，输入 6 位数字完成登录。</p>
+      <form id="verify-form" class="mt-8 space-y-4">
+        <input id="email" type="email" readonly class="w-full rounded-xl border border-slate-700 bg-slate-800 px-4 py-3 outline-none" />
+        <input id="code" type="text" inputmode="numeric" maxlength="6" placeholder="123456" class="w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none focus:border-violet-500" />
+        <button id="login-button" type="submit" class="w-full rounded-xl bg-violet-500 px-4 py-3 font-medium hover:bg-violet-400">登录</button>
+      </form>
+      <p id="message" class="mt-4 text-sm text-slate-400"></p>
+    </main>
+    <script>
+      const email = sessionStorage.getItem('pending_email') || '';
+      const emailInput = document.getElementById('email');
+      const codeInput = document.getElementById('code');
+      const form = document.getElementById('verify-form');
+      const message = document.getElementById('message');
+      const button = document.getElementById('login-button');
+      emailInput.value = email;
+      if (!email) {
+        window.location.href = '/login.html';
+      }
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        button.disabled = true;
+        message.textContent = '登录中...';
+        try {
+          const response = await fetch('/api/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, code: codeInput.value.trim() })
+          });
+          const data = await response.json();
+          if (!response.ok) throw new Error(data.error || '登录失败');
+          localStorage.setItem('token', data.token);
+          localStorage.setItem('user', JSON.stringify(data.user));
+          window.location.href = '/dashboard.html';
+        } catch (error) {
+          message.textContent = error.message;
+          button.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>

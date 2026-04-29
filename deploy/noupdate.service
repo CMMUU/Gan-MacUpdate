@@ -1,0 +1,14 @@
+[Unit]
+Description=NoUpdate Server
+After=network.target
+
+[Service]
+Type=simple
+User=www
+WorkingDirectory=/opt/noupdate/noupdate-server
+ExecStart=/opt/noupdate/noupdate-server/target/release/noupdate-server
+Restart=on-failure
+EnvironmentFile=/opt/noupdate/noupdate-server/.env
+
+[Install]
+WantedBy=multi-user.target

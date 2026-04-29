@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Shell scripts
+*.sh
+
+# Frontend build output
+dist/
+node_modules/
+.vite/
+
+# Rust build output
+**/target/
+
+# IDE
+.idea/

@@ -1,0 +1,6 @@
+Gan-Mac Desktop icon concept
+
+- Shape language: rounded-square app tile + curved shield silhouette
+- Curve style: bezier-driven smooth contours, asymmetrical highlight blobs, softened diagonal slash
+- Meaning: shield = protection, slash = disable update pipeline, cyan accent = system control
+- Palette: purple technology base with cool cyan action stroke for desktop visibility

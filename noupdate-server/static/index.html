@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UpdateMate - macOS Update Manager</title>
+    <meta name="description" content="UpdateMate puts you in control of when your Mac updates. Delay major upgrades, remove red badges, and manage your update schedule with Apple's official APIs." />
+    <meta name="keywords" content="macOS update manager,delay macOS updates,block macOS update badge,UpdateMate,macOS update control" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://example.com/" />
+    <meta property="og:typec" content="website" />
+    <meta property="og:title" content="UpdateMate - macOS Update Manager" />
+    <meta property="og:description" content="Your Mac. Your update schedule." />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:site_name" content="UpdateMate" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "UpdateMate",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS 13+",
+        "description": "A macOS update manager that helps you decide when your Mac updates.",
+        "offers": [
+          { "@type": "Offer", "price": "9.99", "priceCurrency": "USD", "name": "Standard" },
+          { "@type": "Offer", "price": "19.99", "priceCurrency": "USD", "name": "Pro" }
+        ]
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-950 text-white min-h-screen">
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+        <a href="/" class="text-xl font-bold tracking-tight">UpdateMate</a>
+        <nav class="flex gap-5 text-sm text-slate-300 items-center">
+          <a href="/docs.html" class="hover:text-white">Docs</a>
+          <a href="/login.html" class="hover:text-white">Trial & Activation</a>
+          <a href="/dashboard.html" class="hover:text-white">Dashboard</a>
+          <button id="lang-toggle" class="rounded-lg border border-slate-700 px-3 py-1 hover:border-slate-500">中文</button>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-2 items-center">
+        <div class="space-y-6">
+          <span id="hero-badge" class="inline-flex rounded-full border border-emerald-400/30 bg-emerald-500/10 px-4 py-1 text-sm text-emerald-200">Your Mac. Your update schedule.</span>
+          <h1 id="hero-title" class="text-4xl md:text-6xl font-bold tracking-tight">Take control of when your Mac updates</h1>
+          <p id="hero-copy" class="text-slate-300 text-lg leading-8">UpdateMate helps you manage macOS updates on your terms. Using Apple's official configuration APIs, it safely delays major upgrades, keeps your workflow stable, and removes the constant distraction of red update badges.</p>
+          <div class="flex gap-4 flex-wrap">
+            <a id="hero-cta-primary" href="/login.html" class="rounded-xl bg-emerald-500 px-6 py-3 font-medium hover:bg-emerald-400">Try it free for 7 days</a>
+            <a id="hero-cta-secondary" href="/docs.html" class="rounded-xl border border-slate-700 px-6 py-3 font-medium hover:border-slate-500">Read the docs</a>
+          </div>
+          <ul class="grid gap-3 text-slate-300 text-sm">
+            <li id="hero-bullet-1">Built on Apple's official APIs. Safe & compliant.</li>
+            <li id="hero-bullet-2">Stability First / Version Lock / Full Control</li>
+            <li id="hero-bullet-3">Global pricing: $9.99 Standard, $19.99 Pro</li>
+          </ul>
+        </div>
+        <aside class="rounded-3xl border border-slate-800 bg-slate-900 p-8 shadow-2xl shadow-emerald-950/40">
+          <h2 id="pricing-title" class="text-2xl font-semibold">Pricing</h2>
+          <div class="mt-6 grid gap-4">
+            <div class="rounded-2xl border border-slate-800 bg-slate-950 p-5">
+              <div class="flex items-center justify-between"><strong id="trial-name">Free Trial</strong><span id="trial-price" class="text-emerald-300">7 days</span></div>
+              <p id="trial-copy" class="mt-2 text-sm text-slate-400">Full access, no credit card required.</p>
+            </div>
+            <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5">
+              <div class="flex items-center justify-between"><strong id="standard-name">Standard</strong><span id="standard-price" class="text-emerald-300">$9.99 / version</span></div>
+              <p id="standard-copy" class="mt-2 text-sm text-slate-300">1 device, perpetual for the purchased macOS generation.</p>
+            </div>
+            <div class="rounded-2xl border border-slate-800 bg-slate-950 p-5">
+              <div class="flex items-center justify-between"><strong id="pro-name">Pro</strong><span id="pro-price" class="text-emerald-300">$19.99 / version</span></div>
+              <p id="pro-copy" class="mt-2 text-sm text-slate-400">Up to 3 devices, priority support.</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="max-w-6xl mx-auto px-6 pb-16 grid gap-6 md:grid-cols-3">
+        <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h2 id="strategy-1-title" class="text-xl font-semibold">Stability First</h2>
+          <p id="strategy-1-copy" class="mt-3 text-slate-400 leading-7">Delay major updates by 90 days while allowing security patches through.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h2 id="strategy-2-title" class="text-xl font-semibold">Version Lock</h2>
+          <p id="strategy-2-copy" class="mt-3 text-slate-400 leading-7">Stay on your current major version and reduce surprise compatibility issues.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h2 id="strategy-3-title" class="text-xl font-semibold">Full Control</h2>
+          <p id="strategy-3-copy" class="mt-3 text-slate-400 leading-7">Block everything until you're ready and keep your Mac distraction-free.</p>
+        </article>
+      </section>
+    </main>
+    <script>
+      const copy = {
+        en: {
+          lang: 'en',
+          docs: 'Docs',
+          login: 'Trial & Activation',
+          dashboard: 'Dashboard',
+          toggle: '中文',
+          badge: 'Your Mac. Your update schedule.',
+          title: 'Take control of when your Mac updates',
+          body: "UpdateMate helps you manage macOS updates on your terms. Using Apple's official configuration APIs, it safely delays major upgrades, keeps your workflow stable, and removes the constant distraction of red update badges.",
+          cta1: 'Try it free for 7 days',
+          cta2: 'Read the docs',
+          bullet1: "Built on Apple's official APIs. Safe & compliant.",
+          bullet2: 'Stability First / Version Lock / Full Control',
+          bullet3: 'Global pricing: $9.99 Standard, $19.99 Pro',
+          pricingTitle: 'Pricing',
+          trialName: 'Free Trial',
+          trialPrice: '7 days',
+          trialCopy: 'Full access, no credit card required.',
+          standardName: 'Standard',
+          standardPrice: '$9.99 / version',
+          standardCopy: '1 device, perpetual for the purchased macOS generation.',
+          proName: 'Pro',
+          proPrice: '$19.99 / version',
+          proCopy: 'Up to 3 devices, priority support.',
+          s1Title: 'Stability First',
+          s1Copy: 'Delay major updates by 90 days while allowing security patches through.',
+          s2Title: 'Version Lock',
+          s2Copy: 'Stay on your current major version and reduce surprise compatibility issues.',
+          s3Title: 'Full Control',
+          s3Copy: "Block everything until you're ready and keep your Mac distraction-free.",
+          titleTag: 'UpdateMate - macOS Update Manager',
+          descTag: 'UpdateMate puts you in control of when your Mac updates. Delay major upgrades, remove red badges, and manage your update schedule with Apple\'s official APIs.'
+        },
+        zh: {
+          lang: 'zh-CN',
+          docs: '方案文档',
+          login: '试用与激活',
+          dashboard: '控制台',
+          toggle: 'EN',
+          badge: '你的 Mac，你决定何时更新',
+          title: '把更新节奏，重新交还给你',
+          body: 'UpdateMate 不是在“对抗系统更新”，而是帮助你用更稳定、更可控的方式管理更新时机。基于 Apple 官方描述文件能力，配合策略切换、红点清理和续期提醒，让你的 Mac 回到你熟悉的节奏。',
+          cta1: '开始 7 天试用',
+          cta2: '查看文档',
+          bullet1: '基于 Apple 官方 API，强调安全合规',
+          bullet2: '三种策略：稳定优先 / 版本锁定 / 完全自主',
+          bullet3: '中国区定价：标准版 ¥68，专业版 ¥128',
+          pricingTitle: '中国区版本方案',
+          trialName: '试用版',
+          trialPrice: '免费 7 天',
+          trialCopy: '7 天全功能体验，无需预付费。',
+          standardName: '标准版',
+          standardPrice: '¥68 / 版本',
+          standardCopy: '1 台设备，本版永久有效。',
+          proName: '专业版',
+          proPrice: '¥128 / 版本',
+          proCopy: '最多 3 台设备，优先支持。',
+          s1Title: '稳定优先',
+          s1Copy: '大版本更新延迟 90 天，小版本与安全更新正常放行。',
+          s2Title: '版本锁定',
+          s2Copy: '停留在当前 macOS 大版本，减少兼容性风险。',
+          s3Title: '完全自主',
+          s3Copy: '所有更新都由你决定，同时尽量降低打扰感。',
+          titleTag: 'UpdateMate - macOS 更新管家',
+          descTag: 'UpdateMate 帮你自主决定何时更新 Mac。通过 Apple 官方描述文件能力、策略切换、红点清理和续期提醒，重新掌控 macOS 更新节奏。'
+        }
+      };
+
+      const refs = {
+        docsNav: document.querySelector('a[href="/docs.html"]'),
+        loginNav: document.querySelector('a[href="/login.html"]'),
+        dashNav: document.querySelector('a[href="/dashboard.html"]'),
+        toggle: document.getElementById('lang-toggle'),
+        badge: document.getElementById('hero-badge'),
+        title: document.getElementById('hero-title'),
+        body: document.getElementById('hero-copy'),
+        cta1: document.getElementById('hero-cta-primary'),
+        cta2: document.getElementById('hero-cta-secondary'),
+        bullet1: document.getElementById('hero-bullet-1'),
+        bullet2: document.getElementById('hero-bullet-2'),
+        bullet3: document.getElementById('hero-bullet-3'),
+        pricingTitle: document.getElementById('pricing-title'),
+        trialName: document.getElementById('trial-name'),
+        trialPrice: document.getElementById('trial-price'),
+        trialCopy: document.getElementById('trial-copy'),
+        standardName: document.getElementById('standard-name'),
+        standardPrice: document.getElementById('standard-price'),
+        standardCopy: document.getElementById('standard-copy'),
+        proName: document.getElementById('pro-name'),
+        proPrice: document.getElementById('pro-price'),
+        proCopy: document.getElementById('pro-copy'),
+        s1Title: document.getElementById('strategy-1-title'),
+        s1Copy: document.getElementById('strategy-1-copy'),
+        s2Title: document.getElementById('strategy-2-title'),
+        s2Copy: document.getElementById('strategy-2-copy'),
+        s3Title: document.getElementById('strategy-3-title'),
+        s3Copy: document.getElementById('strategy-3-copy')
+      };
+
+      function applyLocale(locale) {
+        const t = copy[locale];
+        document.documentElement.lang = t.lang;
+        document.title = t.titleTag;
+        document.querySelector('meta[name="description"]').setAttribute('content', t.descTag);
+        refs.docsNav.textContent = t.docs;
+        refs.loginNav.textContent = t.login;
+        refs.dashNav.textContent = t.dashboard;
+        refs.toggle.textContent = t.toggle;
+        refs.badge.textContent = t.badge;
+        refs.title.textContent = t.title;
+        refs.body.textContent = t.body;
+        refs.cta1.textContent = t.cta1;
+        refs.cta2.textContent = t.cta2;
+        refs.bullet1.textContent = t.bullet1;
+        refs.bullet2.textContent = t.bullet2;
+        refs.bullet3.textContent = t.bullet3;
+        refs.pricingTitle.textContent = t.pricingTitle;
+        refs.trialName.textContent = t.trialName;
+        refs.trialPrice.textContent = t.trialPrice;
+        refs.trialCopy.textContent = t.trialCopy;
+        refs.standardName.textContent = t.standardName;
+        refs.standardPrice.textContent = t.standardPrice;
+        refs.standardCopy.textContent = t.standardCopy;
+        refs.proName.textContent = t.proName;
+        refs.proPrice.textContent = t.proPrice;
+        refs.proCopy.textContent = t.proCopy;
+        refs.s1Title.textContent = t.s1Title;
+        refs.s1Copy.textContent = t.s1Copy;
+        refs.s2Title.textContent = t.s2Title;
+        refs.s2Copy.textContent = t.s2Copy;
+        refs.s3Title.textContent = t.s3Title;
+        refs.s3Copy.textContent = t.s3Copy;
+        localStorage.setItem('updatemate-locale', locale);
+      }
+
+      const initialLocale = localStorage.getItem('updatemate-locale') || 'en';
+      applyLocale(initialLocale);
+      refs.toggle.addEventListener('click', () => applyLocale((localStorage.getItem('updatemate-locale') || 'en') === 'en' ? 'zh' : 'en'));
+    </script>
+  </body>
+</html>
